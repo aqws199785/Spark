@@ -1,0 +1,4 @@
+hadoop spark flume hive
+hadoop mysql flume hive
+hadoop doris flume hive
+hadoop flink flume hive
