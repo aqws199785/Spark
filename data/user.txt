@@ -1,0 +1,6 @@
+{"name":"1001","age":"30","gender":"man"}
+{"name":"1002","age":"30","gender":"woman"}
+{"name":"1003","age":"30","gender":"man"}
+{"name":"1002","age":"30","gender":"woman"}
+{"name":"1004","age":"30","gender":"woman"}
+{"name":"1005","age":"30","gender":"man"}

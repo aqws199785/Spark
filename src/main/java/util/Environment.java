@@ -3,6 +3,7 @@ package util;
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.sql.SparkSession;
 
 /*
  * 执行环境工具类
@@ -29,5 +30,13 @@ public class Environment {
         SparkContext sparkContext = new SparkContext(conf);
         sparkContext.setLogLevel("OFF");
         return sparkContext;
+    }
+
+    public static SparkSession getSparkSession(){
+        SparkSession sparkSession = SparkSession.builder()
+                .master("local[*]")
+                .appName("SparkSql")
+                .getOrCreate();
+        return sparkSession;
     }
 }
