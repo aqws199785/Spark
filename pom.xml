@@ -14,6 +14,8 @@
         <spark.version>3.3.1</spark.version>
         <lombok.version>1.18.24</lombok.version>
         <kryo.version>5.0.0</kryo.version>
+        <mysql.version>8.0.19</mysql.version>
+        <hive.version>3.3.1</hive.version>
     </properties>
 
     <dependencies>
@@ -29,16 +31,33 @@
             <version>${spark.version}</version>
         </dependency>
 
+
+        <!-- spark 的官方建议序列化方式 比java的默认的序列化快10倍   -->
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>
             <version>${kryo.version}</version>
         </dependency>
 
+        <!-- 快捷生成get set 插件依赖       -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+
+        <!-- spark读写 mysql 的依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- spark读写hive的依赖 -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_2.12</artifactId>
+            <version>${hive.version}</version>
         </dependency>
 
     </dependencies>
