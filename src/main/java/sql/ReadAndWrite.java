@@ -15,6 +15,8 @@ public class ReadAndWrite {
                 .appName("SparkSql")
                 .getOrCreate();
 
+        hive(sparkSession);
+
         sparkSession.close();
     }
 
